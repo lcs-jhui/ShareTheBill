@@ -257,27 +257,18 @@ struct CalculationView: View {
             })
             .buttonStyle(.bordered)
             
-            Group {
-                
-                Text("History")
-                    .font(.headline.smallCaps())
-                    .padding()
-                
-                List(history.reversed()) { somePriorResult in
-                    ResultView(priorResult: somePriorResult)
-                }
-
-            }
+          Spacer()
+            
         }
         .padding(.top, 10)
         .navigationTitle("Share the Bill")
     }
 }
-
-struct CalculationView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
+//
+//struct CalculationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
 //            CalculationView()
-        }
-    }
-}
+//        }
+//    }
+//}
