@@ -17,8 +17,18 @@ struct ShareTheBillApp: App {
     //MARK: Computed Properties
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            TabView {
                 CalculationView(history: $history)
+                    .tabItem {
+                        Image(systemName: "rectangle.split.2x2")
+                        Text("Calculator")
+                    }
+                
+                HistoryView(history: $history)
+                    .tabItem {
+                        Image(systemName: "clock.fill")
+                        Text("History")
+                    }
             }
         }
     }

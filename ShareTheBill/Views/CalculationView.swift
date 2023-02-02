@@ -264,11 +264,11 @@ struct CalculationView: View {
         .navigationTitle("Share the Bill")
     }
 }
-//
-//struct CalculationView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationView {
-//            CalculationView()
-//        }
-//    }
-//}
+
+struct CalculationView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            CalculationView(history: Binding.constant(historyForPreviews))
+        }
+    }
+}
